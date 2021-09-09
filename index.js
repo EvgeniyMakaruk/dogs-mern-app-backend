@@ -19,7 +19,7 @@ const router = Router()
 app.use(express.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ extended: true }))
-
+  
 
 
 const getBreeds = async () => {
