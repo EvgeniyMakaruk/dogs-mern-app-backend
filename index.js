@@ -11,12 +11,13 @@ const cors =require('cors')
 
 
 const app = express()
+const PORT = process.env.PORT || 5000
 app.use('/api/getdogs', require('./route'))
 const router = Router()
 app.use(express.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ extended: true }))
-const PORT = process.env.PORT || 5000
+
 app.use(cors())
 
 
