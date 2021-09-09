@@ -6,19 +6,19 @@ const mongoose = require('mongoose')
 const Breeds = require('./breeds')
 const Dogs = require('./dogs')
 const { Router } = require('express')
+const route = require('./route')
 require('dotenv').config()
-const cors =require('cors')
+const cors = require('cors')
 
 
 const app = express()
 const PORT = process.env.PORT || 5000
+app.use(cors())
 app.use('/api/getdogs', require('./route'))
 const router = Router()
 app.use(express.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ extended: true }))
-
-app.use(cors())
 
 
 
