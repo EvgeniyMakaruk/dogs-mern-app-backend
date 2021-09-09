@@ -20,17 +20,17 @@ app.use(express.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ extended: true }))
   
-
+ 
 
 const getBreeds = async () => {
    try {
       return await axios({
          url: 'https://dog.ceo/api/breeds/image/random/100'
       })
-   } catch (e) {
-      console.log(e);
+   } catch (error) {
+      console.log(error);
    }
-}
+} 
 const start = async () => {
 
 
